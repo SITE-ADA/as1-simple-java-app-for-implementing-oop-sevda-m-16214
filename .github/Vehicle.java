@@ -1,7 +1,7 @@
 public class Vehicle {
-    public String id;
-    public String brand;
-    public int year;
+    private String id;
+    private String brand;
+    private int year;
     public String getId() {
         return id;
     }

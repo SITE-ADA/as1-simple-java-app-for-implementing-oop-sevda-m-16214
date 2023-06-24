@@ -8,7 +8,7 @@ class Car extends Account {
             this.numberOfSeats = 5;
         }
 
-        public Car(int numberOfSeats, int id, int brand, int year){
+        public Car(int numberOfSeats, String id, String brand, int year){
             this.numberOfSeats = getNumberOfSeats();
         }
         public int getNumberOfSeats() {
@@ -26,5 +26,29 @@ class Car extends Account {
     }
 
 class Motorcycle extends Account{
+    boolean hasSidecar;
 
+    public Motorcycle(boolean hasSidecar){
+        this.hasSidecar = false;
+    }
+
+    public Motorcycle(boolean hasSidecar, String id , String brand, int year){
+        this.hasSidecar = isHasSidecar();
+    }
+
+    public void startEngine(){
+        System.out.println("Motorcycle engone starts...");
+    }
+
+
+
+    public boolean isHasSidecar() {
+        return hasSidecar;
+    }
+
+
+
+    public void setHasSidecar(boolean hasSidecar) {
+        this.hasSidecar = hasSidecar;
+    }
 }
